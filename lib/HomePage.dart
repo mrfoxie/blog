@@ -54,6 +54,8 @@ class _HomePageState extends  State<HomePage>{
       body: new Container(
        decoration: BoxDecoration(image: DecorationImage(image: ExactAssetImage("images/back.png"),fit: BoxFit.fill),),
           child: postsList.length == 0 ? null : new ListView.builder(
+            controller: null,
+            
           itemCount: postsList.length,
           itemBuilder: (_, index){
             return postsUI(postsList[index].image, postsList[index].description, postsList[index].date, postsList[index].time);
